@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadstagram - Gym Social Media</title>
+  <style>
+    /* CSS styles */
+
+    /* ... existing styles ... */
+
+    #login-form {
+      margin-bottom: 10px;
+    }
+
+    #login-form input {
+      margin-bottom: 5px;
+    }
+
+    .post .username {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- ... existing header code ... -->
+  </header>
+
+  <main>
+    <section id="create-account">
+      <h2>Create Account</h2>
+      <form id="create-account-form">
+        <input type="text" id="new-username" placeholder="New Username">
+        <input type="password" id="new-password" placeholder="New Password">
+        <button type="submit">Create Account</button>
+      </form>
+    </section>
+
+    <section id="login" style="display: none;">
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <section id="create-post" style="display: none;">
+      <h2>Create Post</h2>
+      <form id="post-form">
+        <textarea id="post-text" placeholder="Write something..."></textarea>
+        <button type="submit">Post</button>
+      </form>
+    </section>
+
+    <section id="posts" style="display: none;">
+      <h2>Recent Posts</h2>
+      <div id="post-list"></div>
+    </section>
+  </main>
+
+  <script>
+    const accounts = [];
+
+    document.getElementById("create-account-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Get the new username and password
+      const newUsername = document.getElementById("new-username").value;
+      const newPassword = document.getElementById("new-password").value;
+
+      // Check if username is already taken
+      const existingAccount = accounts.find(acc => acc.username === newUsername);
+      if (existingAccount) {
+        alert("Username is already taken. Please choose a different username.");
+      } else {
+        // Create new account
+        accounts.push({ username: newUsername, password: newPassword });
+
+        // Clear the new username and password fields
+        document.getElementById("new-username").value = "";
+        document.getElementById("new-password").value = "";
+
+        alert("Account created successfully. Please login with your new account.");
+
+        // Show the login section
+        document.getElementById("login").style.display = "block";
+        // Hide the create account section
+        document.getElementById("create-account").style.display = "none";
+      }
+    });
+
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Get the entered username and password
+      const enteredUsername = document.getElementById("username").value;
+      const enteredPassword = document.getElementById("password").value;
+
+      // Perform authentication logic
+      const account = accounts.find(acc => acc.username === enteredUsername && acc.password === enteredPassword);
+      if (account) {
+        // Hide the login section
+        document.getElementById("login").style.display = "none";
+
+        // Show the create post and posts sections
+        document.getElementById("create-post").style.display = "block";
+        document.getElementById("posts").style.display = "block";
+
+        // Update the username display
+        document.getElementById("post-form").setAttribute("data-username", enteredUsername);
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    });
+
+    document.getElementById("post-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Get the post text from the textarea
+      const postText = document.getElementById("post-text").value;
+
+      // Get the username from the form's data attribute
+      const username = document.getElementById("post-form").getAttribute("data-username");
+
+      // Create a new post element
+      const postElement = document.createElement("div");
+      postElement.classList.add("post");
+      postElement.innerHTML = "<p class='username'>" + username + "</p><p>" + postText + "</p><p class='timestamp'>" + new Date() + "</p>";
+
+      // Append the post element to the post list
+      const postList = document.getElementById("post-list");
+      postList.prepend(postElement);
+
+      // Clear the textarea
+      document.getElementById("post-text").value = "";
+    });
+  </script>
+</body>
+</html>
