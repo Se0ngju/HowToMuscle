@@ -3,140 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quadstagram - Gym Social Media</title>
+  <title>HowToMuscle</title>
   <style>
-    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 20px;
+    }
 
-    /* ... existing styles ... */
+    .muscle-box {
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-    #login-form {
+    .muscle-box h3 {
+      font-size: 22px;
+      margin: 0;
       margin-bottom: 10px;
+      color: #333;
     }
 
-    #login-form input {
-      margin-bottom: 5px;
-    }
-
-    .post .username {
-      font-weight: bold;
-      margin-bottom: 5px;
+    .muscle-box p {
+      font-size: 16px;
+      margin: 0;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <header>
-    <!-- ... existing header code ... -->
-  </header>
+  <div class="muscle-box" style="background-color: #ffc107;">
+    <h3>Chest</h3>
+    <p>Exercise 1: [Insert chest exercise instructions here]</p>
+    <p>Exercise 2: [Insert chest exercise instructions here]</p>
+    <p>Exercise 3: [Insert chest exercise instructions here]</p>
+  </div>
 
-  <main>
-    <section id="create-account">
-      <h2>Create Account</h2>
-      <form id="create-account-form">
-        <input type="text" id="new-username" placeholder="New Username">
-        <input type="password" id="new-password" placeholder="New Password">
-        <button type="submit">Create Account</button>
-      </form>
-    </section>
+  <div class="muscle-box" style="background-color: #4caf50;">
+    <h3>Shoulders</h3>
+    <p>Exercise 1: [Insert shoulder exercise instructions here]</p>
+    <p>Exercise 2: [Insert shoulder exercise instructions here]</p>
+    <p>Exercise 3: [Insert shoulder exercise instructions here]</p>
+  </div>
 
-    <section id="login" style="display: none;">
-      <h2>Login</h2>
-      <form id="login-form">
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button type="submit">Login</button>
-      </form>
-    </section>
+  <div class="muscle-box" style="background-color: #f44336;">
+    <h3>Back</h3>
+    <p>Exercise 1: [Insert back exercise instructions here]</p>
+    <p>Exercise 2: [Insert back exercise instructions here]</p>
+    <p>Exercise 3: [Insert back exercise instructions here]</p>
+  </div>
 
-    <section id="create-post" style="display: none;">
-      <h2>Create Post</h2>
-      <form id="post-form">
-        <textarea id="post-text" placeholder="Write something..."></textarea>
-        <button type="submit">Post</button>
-      </form>
-    </section>
+  <div class="muscle-box" style="background-color: #9c27b0;">
+    <h3>Biceps</h3>
+    <p>Exercise 1: [Insert biceps exercise instructions here]</p>
+    <p>Exercise 2: [Insert biceps exercise instructions here]</p>
+    <p>Exercise 3: [Insert biceps exercise instructions here]</p>
+  </div>
 
-    <section id="posts" style="display: none;">
-      <h2>Recent Posts</h2>
-      <div id="post-list"></div>
-    </section>
-  </main>
+  <div class="muscle-box" style="background-color: #2196f3;">
+    <h3>Triceps</h3>
+    <p>Exercise 1: [Insert triceps exercise instructions here]</p>
+    <p>Exercise 2: [Insert triceps exercise instructions here]</p>
+    <p>Exercise 3: [Insert triceps exercise instructions here]</p>
+  </div>
 
-  <script>
-    const accounts = [];
+  <div class="muscle-box" style="background-color: #ff5722;">
+    <h3>Legs</h3>
+    <p>Exercise 1: [Insert leg exercise instructions here]</p>
+    <p>Exercise 2: [Insert leg exercise instructions here]</p>
+    <p>Exercise 3: [Insert leg exercise instructions here]</p>
+  </div>
 
-    document.getElementById("create-account-form").addEventListener("submit", function(event) {
-      event.preventDefault();
+  <div class="muscle-box" style="background-color: #673ab7;">
+    <h3>Glutes</h3>
+    <p>Exercise 1: [Insert glutes exercise instructions here]</p>
+    <p>Exercise 2: [Insert glutes exercise instructions here]</p>
+    <p>Exercise 3: [Insert glutes exercise instructions here]</p>
+  </div>
 
-      // Get the new username and password
-      const newUsername = document.getElementById("new-username").value;
-      const newPassword = document.getElementById("new-password").value;
+  <div class="muscle-box" style="background-color: #607d8b;">
+    <h3>Abdominals</h3>
+    <p>Exercise 1: [Insert abdominal exercise instructions here]</p>
+    <p>Exercise 2: [Insert abdominal exercise instructions here]</p>
+    <p>Exercise 3: [Insert abdominal exercise instructions here]</p>
+  </div>
 
-      // Check if username is already taken
-      const existingAccount = accounts.find(acc => acc.username === newUsername);
-      if (existingAccount) {
-        alert("Username is already taken. Please choose a different username.");
-      } else {
-        // Create new account
-        accounts.push({ username: newUsername, password: newPassword });
+  <div class="muscle-box" style="background-color: #795548;">
+    <h3>Lower Back</h3>
+    <p>Exercise 1: [Insert lower back exercise instructions here]</p>
+    <p>Exercise 2: [Insert lower back exercise instructions here]</p>
+    <p>Exercise 3: [Insert lower back exercise instructions here]</p>
+  </div>
 
-        // Clear the new username and password fields
-        document.getElementById("new-username").value = "";
-        document.getElementById("new-password").value = "";
+  <div class="muscle-box" style="background-color: #ff9800;">
+    <h3>Forearms</h3>
+    <p>Exercise 1: [Insert forearms exercise instructions here]</p>
+    <p>Exercise 2: [Insert forearms exercise instructions here]</p>
+    <p>Exercise 3: [Insert forearms exercise instructions here]</p>
+  </div>
 
-        alert("Account created successfully. Please login with your new account.");
+  <div class="muscle-box" style="background-color: #9e9e9e;">
+    <h3>Neck</h3>
+    <p>Exercise 1: [Insert neck exercise instructions here]</p>
+    <p>Exercise 2: [Insert neck exercise instructions here]</p>
+    <p>Exercise 3: [Insert neck exercise instructions here]</p>
+  </div>
 
-        // Show the login section
-        document.getElementById("login").style.display = "block";
-        // Hide the create account section
-        document.getElementById("create-account").style.display = "none";
-      }
-    });
-
-    document.getElementById("login-form").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      // Get the entered username and password
-      const enteredUsername = document.getElementById("username").value;
-      const enteredPassword = document.getElementById("password").value;
-
-      // Perform authentication logic
-      const account = accounts.find(acc => acc.username === enteredUsername && acc.password === enteredPassword);
-      if (account) {
-        // Hide the login section
-        document.getElementById("login").style.display = "none";
-
-        // Show the create post and posts sections
-        document.getElementById("create-post").style.display = "block";
-        document.getElementById("posts").style.display = "block";
-
-        // Update the username display
-        document.getElementById("post-form").setAttribute("data-username", enteredUsername);
-      } else {
-        alert("Invalid username or password. Please try again.");
-      }
-    });
-
-    document.getElementById("post-form").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      // Get the post text from the textarea
-      const postText = document.getElementById("post-text").value;
-
-      // Get the username from the form's data attribute
-      const username = document.getElementById("post-form").getAttribute("data-username");
-
-      // Create a new post element
-      const postElement = document.createElement("div");
-      postElement.classList.add("post");
-      postElement.innerHTML = "<p class='username'>" + username + "</p><p>" + postText + "</p><p class='timestamp'>" + new Date() + "</p>";
-
-      // Append the post element to the post list
-      const postList = document.getElementById("post-list");
-      postList.prepend(postElement);
-
-      // Clear the textarea
-      document.getElementById("post-text").value = "";
-    });
-  </script>
+  <div class="muscle-box" style="background-color: #ffeb3b;">
+    <h3>Core Muscles</h3>
+    <p>Exercise 1: [Insert core exercise instructions here]</p>
+    <p>Exercise 2: [Insert core exercise instructions here]</p>
+    <p>Exercise 3: [Insert core exercise instructions here]</p>
+  </div>
 </body>
 </html>
