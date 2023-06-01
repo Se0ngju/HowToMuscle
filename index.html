@@ -12,92 +12,98 @@
       padding: 20px;
     }
 
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #000;
+      margin-bottom: 30px;
+    }
+
+    .muscle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
     .muscle-box {
-      width: 300px;
-      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 300px;
       background-color: #fff;
       border-radius: 10px;
       padding: 20px;
-      margin-bottom: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .muscle-box img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
     }
 
     .muscle-box h3 {
       font-size: 22px;
-      margin: 0;
-      margin-bottom: 10px;
-      color: #000;
-    }
-
-    .muscle-box p {
-      font-size: 16px;
       margin: 0;
       color: #000;
     }
   </style>
 </head>
 <body>
-  <div class="muscle-box" style="background-color: #ffc107;">
-    <h3>Chest</h3>
-    <p>Exercise 1: [Insert chest exercise instructions here]</p>
-    <p>Exercise 2: [Insert chest exercise instructions here]</p>
-    <p>Exercise 3: [Insert chest exercise instructions here]</p>
-  </div>
+  <h1>HowToMuscle</h1>
 
-  <div class="muscle-box" style="background-color: #4caf50;">
-    <h3>Shoulders</h3>
-    <p>Exercise 1: [Insert shoulder exercise instructions here]</p>
-    <p>Exercise 2: [Insert shoulder exercise instructions here]</p>
-    <p>Exercise 3: [Insert shoulder exercise instructions here]</p>
-  </div>
+  <div class="muscle-grid">
+    <div class="muscle-box" onclick="window.location.href='chest.html';">
+      <img src="chest.png" alt="Chest">
+      <h3>Chest</h3>
+    </div>
 
-  <div class="muscle-box" style="background-color: #f44336;">
-    <h3>Back</h3>
-    <p>Exercise 1: [Insert back exercise instructions here]</p>
-    <p>Exercise 2: [Insert back exercise instructions here]</p>
-    <p>Exercise 3: [Insert back exercise instructions here]</p>
-  </div>
+    <div class="muscle-box" onclick="window.location.href='shoulders.html';">
+      <img src="shoulders.png" alt="Shoulders">
+      <h3>Shoulders</h3>
+    </div>
 
-  <div class="muscle-box" style="background-color: #9c27b0;">
-    <h3>Biceps</h3>
-    <p>Exercise 1: [Insert biceps exercise instructions here]</p>
-    <p>Exercise 2: [Insert biceps exercise instructions here]</p>
-    <p>Exercise 3: [Insert biceps exercise instructions here]</p>
-  </div>
+    <div class="muscle-box" onclick="window.location.href='back.html';">
+      <img src="back.png" alt="Back">
+      <h3>Back</h3>
+    </div>
 
-  <div class="muscle-box" style="background-color: #2196f3;">
-    <h3>Triceps</h3>
-    <p>Exercise 1: [Insert triceps exercise instructions here]</p>
-    <p>Exercise 2: [Insert triceps exercise instructions here]</p>
-    <p>Exercise 3: [Insert triceps exercise instructions here]</p>
-  </div>
+    <div class="muscle-box" onclick="window.location.href='biceps.html';">
+      <img src="biceps.png" alt="Biceps">
+      <h3>Biceps</h3>
+    </div>
 
-  <div class="muscle-box" style="background-color: #ff5722;">
-    <h3>Legs</h3>
-    <p>Exercise 1: [Insert leg exercise instructions here]</p>
-    <p>Exercise 2: [Insert leg exercise instructions here]</p>
-    <p>Exercise 3: [Insert leg exercise instructions here]</p>
-  </div>
+    <div class="muscle-box" onclick="window.location.href='triceps.html';">
+      <img src="triceps.png" alt="Triceps">
+      <h3>Triceps</h3>
+    </div>
 
-  <div class="muscle-box" style="background-color: #607d8b;">
-    <h3>Abdominals</h3>
-    <p>Exercise 1: [Insert abdominal exercise instructions here]</p>
-    <p>Exercise 2: [Insert abdominal exercise instructions here]</p>
-    <p>Exercise 3: [Insert abdominal exercise instructions here]</p>
-  </div>
+    <div class="muscle-box" onclick="window.location.href='legs.html';">
+      <img src="legs.png" alt="Legs">
+      <h3>Legs</h3>
+    </div>
 
-  <div class="muscle-box" style="background-color: #ff9800;">
-    <h3>Forearms</h3>
-    <p>Exercise 1: [Insert forearms exercise instructions here]</p>
-    <p>Exercise 2: [Insert forearms exercise instructions here]</p>
-    <p>Exercise 3: [Insert forearms exercise instructions here]</p>
-  </div>
+    <div class="muscle-box" onclick="window.location.href='abdominals.html';">
+      <img src="abdominals.png" alt="Abdominals">
+      <h3>Abdominals</h3>
+    </div>
 
-  <div class="muscle-box" style="background-color: #9e9e9e;">
-    <h3>Neck</h3>
-    <p>Exercise 1: [Insert neck exercise instructions here]</p>
-    <p>Exercise 2: [Insert neck exercise instructions here]</p>
-    <p>Exercise 3: [Insert neck exercise instructions here]</p>
+    <div class="muscle-box" onclick="window.location.href='forearms.html';">
+      <img src="forearms.png" alt="Forearms">
+      <h3>Forearms</h3>
+    </div>
+
+    <div class="muscle-box" onclick="window.location.href='neck.html';">
+      <img src="neck.png" alt="Neck">
+      <h3>Neck</h3>
+    </div>
   </div>
 
 </body>
